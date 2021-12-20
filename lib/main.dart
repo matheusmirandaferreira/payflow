@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:payflow/modules/home/home_page.dart';
 import 'package:payflow/modules/login/login_page.dart';
-import 'package:payflow/modules/splash/splash_page.dart';
 import 'package:payflow/shared/theme/app_colors.dart';
 
 void main() {
