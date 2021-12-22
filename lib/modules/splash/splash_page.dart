@@ -3,8 +3,6 @@ import 'package:payflow/shared/theme/app_colors.dart';
 import 'package:payflow/shared/theme/app_images.dart';
 
 class SplashPage extends StatelessWidget {
-  const SplashPage({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
