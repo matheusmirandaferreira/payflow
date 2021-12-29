@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class AuthController {
   var isAuthenticated = false;
@@ -19,5 +20,19 @@ class AuthController {
         context, '/login'
       );
     }
+  }
+
+  Future<void> saveUser(var user) async {
+    final instance = await SharedPreferences.getInstance();
+    await instance.setString('user', user);
+    return;
+  }
+
+  Future<void> currentUser(BuildContext context) async {
+    final instance = await SharedPreferences.getInstance();
+    final user = instance.getString('user');
+
+    setUser(context, user);
+    return;
   }
 }
